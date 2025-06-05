@@ -1,0 +1,27 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #111;
+  color: #eee;
+  transition: background 0.3s, color 0.3s;
+}
+
+.theme-light {
+  background-color: #fff;
+  color: #111;
+}
+
+header {
+  padding: 1rem;
+  background: #222;
+  display: flex;
+  justify-content: space-between;
+}
+
+.executor-card {
+  background: #1a1a1a;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
