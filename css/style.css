@@ -54,3 +54,34 @@ header {
 }
 .log { color: #ffeb3b; font-size: 0.9em; }
 .tea { color: #e91e63; font-style: italic; font-size: 0.85em; }
+.executor-banner img {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.executor-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.executor-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 9999px;
+}
+
+.executor-name.clickable {
+  cursor: pointer;
+  color: #00bcd4;
+}
+
+.executor-links a {
+  display: inline-block;
+  margin-right: 10px;
+  text-decoration: none;
+  color: #4caf50;
+  font-weight: bold;
+}
