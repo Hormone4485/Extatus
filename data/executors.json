@@ -5,7 +5,16 @@
     "type": "Free",
     "executorStatus": "online",
     "detectionStatus": "detected",
-    "rating": 3.5,
+    "rating": 4.2,
     "lastUpdated": "2025-06-03"
+  },
+  {
+    "name": "Delta",
+    "platform": "Android",
+    "type": "Free",
+    "executorStatus": "online",
+    "detectionStatus": "undetected",
+    "rating": 4.7,
+    "lastUpdated": "2025-06-04"
   }
 ]
