@@ -52,3 +52,5 @@ header {
 .status.maybe {
   background-color: #ff9800;
 }
+.log { color: #ffeb3b; font-size: 0.9em; }
+.tea { color: #e91e63; font-style: italic; font-size: 0.85em; }
