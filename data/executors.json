@@ -6,7 +6,9 @@
     "executorStatus": "online",
     "detectionStatus": "detected",
     "rating": 4.2,
-    "lastUpdated": "2025-06-03"
+    "lastUpdated": "2025-06-03",
+    "log": "Was detected last week, fixed in recent update.",
+    "tea": "People say it’s copying AWP UI 👀"
   },
   {
     "name": "Delta",
