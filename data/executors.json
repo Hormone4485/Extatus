@@ -6,12 +6,12 @@
     "executorStatus": "online",
     "detectionStatus": "detected",
     "rating": 4.2,
-    "lastUpdated": "2025-06-03",
-    "logo": "logos/swift.png",
+    "lastUpdated": "2025-06-05",
+    "logo": "https://raw.githubusercontent.com/Hormone4485/extatus/refs/heads/main/data/logos/swift.png",
     "banner": "banners/swift-banner.jpg",
-    "website": "https://swiftexecutor.dev",
-    "discord": "https://discord.gg/swift",
-    "log": "Detected and fixed last update.",
+    "website": "https://getswift.gg/",
+    "discord": "https://discord.gg/getswiftgg",
+    "log": "It's working, But you gotta use alt 😶",
     "tea": "Ancient Executor"
   },
   {
