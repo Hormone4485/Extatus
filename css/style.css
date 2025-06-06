@@ -25,3 +25,30 @@ header {
   border-radius: 12px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.4);
 }
+.status {
+  padding: 2px 6px;
+  border-radius: 8px;
+  font-size: 0.85em;
+  color: white;
+  text-transform: capitalize;
+}
+
+.status.online {
+  background-color: #4caf50; /* green */
+}
+
+.status.offline {
+  background-color: #f44336; /* red */
+}
+
+.status.detected {
+  background-color: #f44336;
+}
+
+.status.undetected {
+  background-color: #4caf50;
+}
+
+.status.maybe {
+  background-color: #ff9800;
+}
