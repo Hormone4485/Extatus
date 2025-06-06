@@ -35,8 +35,8 @@ function renderExecutors(data) {
       <p><strong>Detection:</strong> <span class="status ${exec.detectionStatus}">${exec.detectionStatus}</span></p>
       <p><em>Last Updated: ${formatRelativeDate(exec.lastUpdated)}</em></p>
     
-      ${exec.log ? `<p class="log"><strong>Log:</strong> ${exec.log}</p>` : ""}
-      ${exec.tea ? `<p class="tea"><strong>Tea:</strong> ${exec.tea}</p>` : ""}
+      ${exec.log ? `<p class="log"><strong>Latest update: </strong> ${exec.log}</p>` : ""}
+      ${exec.tea ? `<p class="tea">${exec.tea}</p>` : ""}
     
       <div class="executor-links" style="margin-top: 10px;">
         ${exec.website ? `<a href="${exec.website}" target="_blank">🌐 Website</a>` : ""}
