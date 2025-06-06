@@ -7,8 +7,12 @@
     "detectionStatus": "detected",
     "rating": 4.2,
     "lastUpdated": "2025-06-03",
-    "log": "Was detected last week, fixed in recent update.",
-    "tea": "People say it’s copying AWP UI 👀"
+    "logo": "logos/swift.png",
+    "banner": "banners/swift-banner.jpg",
+    "website": "https://swiftexecutor.dev",
+    "discord": "https://discord.gg/swift",
+    "log": "Detected and fixed last update.",
+    "tea": "Ancient Executor"
   },
   {
     "name": "Delta",
