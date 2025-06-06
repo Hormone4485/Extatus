@@ -1,5 +1,5 @@
-document.getElementById("themeToggle").addEventListener("click", () => {
-  document.body.classList.toggle("theme-light");
+document.querySelector(".theme-toggle").addEventListener("click", () => {
+  document.body.classList.toggle("dark");
 });
 let executorData = [];
 
