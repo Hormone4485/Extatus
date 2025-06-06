@@ -26,13 +26,15 @@ body.dark {
 }
 
 header {
-  background: var(--accent);
-  padding: 1rem 2rem;
+  background-color: #2c0b0e; /* deep reddish-maroon tone */
   color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1rem 2rem;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
 }
+
 
 header h1 {
   margin: 0;
@@ -173,4 +175,22 @@ body.dark .filters select {
   background: #2a2a2a;
   color: #eee;
   border-color: #444;
+}
+.site-logo {
+  max-width: 50px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: contain;
+}
+
+@media (max-width: 600px) {
+  .site-logo {
+    max-width: 40px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .site-logo {
+    max-width: 60px;
+  }
 }
