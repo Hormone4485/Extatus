@@ -95,10 +95,17 @@ body.dark .executor-card {
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
 }
 
-.executor-banner img {
+.executor-banner {
   width: 100%;
-  border-radius: 0.75rem;
-  margin-bottom: 1rem;
+  max-height: 150px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+@media (max-width: 600px) {
+  .executor-banner {
+    max-height: 100px;
+  }
 }
 
 .executor-header {
@@ -109,10 +116,24 @@ body.dark .executor-card {
 }
 
 .executor-logo {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
   object-fit: cover;
+  margin-right: 10px;
+}
+@media (max-width: 600px) {
+  .executor-logo {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .executor-logo {
+    width: 48px;
+    height: 48px;
+  }
 }
 
 .executor-name {
