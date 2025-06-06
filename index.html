@@ -9,27 +9,37 @@
 <body class="theme-dark">
 
   <header>
-    <h1>Extatus</h1>
+    <div class="logo-container">
+      <img src="assets/logo.png" alt="Extatus Logo" class="site-logo">
+      <h1>Extatus</h1>
+    </div>
     <button class="theme-toggle">🌓</button>
   </header>
-
 
   <main>
     <section id="filters">
       <!-- Platform, Status, Type Filters here -->
       <div class="filters">
-        <label><input type="checkbox" class="platform-filter" value="PC"> PC</label>
-        <label><input type="checkbox" class="platform-filter" value="Android"> Android</label>
-        <label><input type="checkbox" class="platform-filter" value="iOS"> iOS</label>
+        <select id="platformFilter">
+          <option value="">All Platforms</option>
+          <option value="PC">PC</option>
+          <option value="Android">Android</option>
+          <option value="iOS">iOS</option>
+        </select>
         
-        <label><input type="checkbox" class="type-filter" value="Free"> Free</label>
-        <label><input type="checkbox" class="type-filter" value="Paid"> Paid</label>
-        
-        <label><input type="checkbox" class="detection-filter" value="undetected"> Undetected</label>
-        <label><input type="checkbox" class="detection-filter" value="detected"> Detected</label>
-        <label><input type="checkbox" class="detection-filter" value="maybe"> Maybe</label>
+        <select id="typeFilter">
+          <option value="">All Types</option>
+          <option value="Free">Free</option>
+          <option value="Paid">Paid</option>
+        </select>
+
+        <select id="detectionFilter">
+          <option value="">All Detection Status</option>
+          <option value="undetected">Undetected</option>
+          <option value="detected">Detected</option>
+          <option value="maybe">Maybe</option>
+        </select>
       </div>
-      
     </section>
 
     <section id="executors">
@@ -38,7 +48,7 @@
   </main>
 
   <footer>
-    <p>Made with ❤️ for the HoHo Hub</p>
+    <p>Made with ❤️ for HoHo Hub</p>
   </footer>
 
   <script src="js/main.js"></script>
