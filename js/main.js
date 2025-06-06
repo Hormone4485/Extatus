@@ -1,6 +1,16 @@
+const body = document.body;
+
+// Load saved theme
+const savedTheme = localStorage.getItem("theme");
+if (savedTheme === "dark") {
+  body.classList.add("dark");
+}
+
 document.querySelector(".theme-toggle").addEventListener("click", () => {
-  document.body.classList.toggle("dark");
+  body.classList.toggle("dark");
+  localStorage.setItem("theme", body.classList.contains("dark") ? "dark" : "light");
 });
+//
 let executorData = [];
 
 // Fetch JSON data and render all executors
@@ -60,25 +70,42 @@ function formatRelativeDate(dateString) {
 }
 
 // Handle filter changes
-document.querySelectorAll(".filters input").forEach(input => {
-  input.addEventListener("change", () => {
-    const platforms = [...document.querySelectorAll(".platform-filter:checked")].map(i => i.value);
-    const types = [...document.querySelectorAll(".type-filter:checked")].map(i => i.value);
-    const detections = [...document.querySelectorAll(".detection-filter:checked")].map(i => i.value);
+const platformFilter = document.getElementById("platformFilter");
+const typeFilter = document.getElementById("typeFilter");
+const detectionFilter = document.getElementById("detectionFilter");
 
-    const filtered = executorData.filter(exec => {
-      const matchesPlatform = platforms.length ? platforms.includes(exec.platform) : true;
-      const matchesType = types.length ? types.includes(exec.type) : true;
+// Load saved values or set defaults
+platformFilter.value = localStorage.getItem("platformFilter") || "Android";
+typeFilter.value = localStorage.getItem("typeFilter") || "Free";
+detectionFilter.value = localStorage.getItem("detectionFilter") || "";
 
-      // Detection logic: "maybe" includes "undetected"
-      let status = exec.detectionStatus.toLowerCase();
-      const matchesDetection = detections.length
-        ? detections.includes(status) || (detections.includes("maybe") && status === "undetected")
-        : true;
+function filterExecutors() {
+  const platformVal = platformFilter.value;
+  const typeVal = typeFilter.value;
+  const detectionVal = detectionFilter.value;
 
-      return matchesPlatform && matchesType && matchesDetection;
-    });
+  localStorage.setItem("platformFilter", platformVal);
+  localStorage.setItem("typeFilter", typeVal);
+  localStorage.setItem("detectionFilter", detectionVal);
 
-    renderExecutors(filtered);
+  const filtered = executorData.filter(exec => {
+    const platformOk = !platformVal || exec.platform === platformVal;
+    const typeOk = !typeVal || exec.type === typeVal;
+    const detectOk =
+      !detectionVal ||
+      exec.detectionStatus === detectionVal ||
+      (detectionVal === "maybe" && exec.detectionStatus === "undetected");
+
+    return platformOk && typeOk && detectOk;
   });
-});
+
+  renderExecutors(filtered);
+}
+
+// Hook to dropdown changes
+[platformFilter, typeFilter, detectionFilter].forEach(el =>
+  el.addEventListener("change", filterExecutors)
+);
+
+// Initial filtering on load
+filterExecutors();
